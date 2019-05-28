@@ -26,6 +26,10 @@ type Line struct {
 	discarded int
 }
 
+func NewLine(bytes []byte, discarded int) Line {
+	return Line{bytes, discarded}
+}
+
 func (l *Line) Bytes() []byte {
 	return l.bytes
 }
